@@ -2,7 +2,9 @@
 // This is only a SKELETON file for the 'Collatz Conjecture' exercise. It's been provided as a
 // convenience to get you started writing code faster.
 //
-function colCon(n) {
+export const steps = (n) => {
+  if (n < 1) throw new Error("Only positive numbers are allowed");
+
   let count = 0;
 
   while (n != 1) {
@@ -15,11 +17,4 @@ function colCon(n) {
     }
   }
   return count;
-}
-
-export const steps = (n) => {
-  if (n > 0) {
-    return colCon(n);
-  }
-  throw new Error("Only positive numbers are allowed");
 };
