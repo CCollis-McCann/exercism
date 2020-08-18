@@ -3,10 +3,7 @@
 // convenience to get you started writing code faster.
 //
 
-export const isPangram = str => {
-  const ALPHABET = 'abcdefghijklmnopqrstuvwxyz';
+const ALPHABET = [...'abcdefghijklmnopqrstuvwxyz'];
 
-  return !str
-    ? false
-    : [...ALPHABET].every(el => str.toLowerCase().includes(el));
-};
+export const isPangram = str =>
+  !str ? false : ALPHABET.every(el => str.toLowerCase().includes(el));
